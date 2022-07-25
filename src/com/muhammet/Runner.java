@@ -21,6 +21,10 @@ public class Runner {
 		boolean isException= false;
 		do {
 			try {
+				/**
+				 * Kodlarý bu þekilde kontrol etmek performansý düþürür mü?
+				 * hayýr.
+				 */
 				sc = new Scanner(System.in);
 				System.out.print("1. sayýyý giriniz....: ");
 				s1 = sc.nextInt();
