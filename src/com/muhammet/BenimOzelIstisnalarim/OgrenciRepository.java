@@ -27,10 +27,13 @@ public class OgrenciRepository {
 		listedeBulunan.setSoyad(ogrenci.getSoyad());
 	}
 	
-	public Ogrenci findById(Long id) {
+	public Ogrenci findById(Long id) {		
 		Optional<Ogrenci> ogrenci = ogrenciListesi.stream()
 				.filter(x-> x.getId().equals(id)).findFirst();
-		return ogrenci.get();
+		if(ogrenci.isEmpty()) {
+			throw new OgrenciException("Bu id ile Öðrenci yoktur.");
+		}else		
+			return ogrenci.get();
 		
 	}
 	

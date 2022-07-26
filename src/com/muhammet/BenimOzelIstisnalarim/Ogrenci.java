@@ -1,12 +1,20 @@
 package com.muhammet.BenimOzelIstisnalarim;
 
 public class Ogrenci {
+	
 	private static long count=1L;
 	private Long id;
 	private String ad;
 	private String soyad;
 	
+	
 		
+	@Override
+	public String toString() {
+		return "Ogrenci [id=" + id + ", ad=" + ad + ", soyad=" + soyad + "]";
+	}
+
+
 	public Ogrenci() {
 		super();
 	}
@@ -26,6 +34,8 @@ public class Ogrenci {
 		this.ad = ad;
 		this.soyad = soyad;
 	}
+	
+	
 	public Long getId() {
 		return id;
 	}
