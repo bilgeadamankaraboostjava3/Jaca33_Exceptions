@@ -10,8 +10,9 @@ public class Runner {
 		ogrenciOlustur();
 		ogrenciListesiGoruntule();
 		
-		System.out.println(db.findById(10L).toString());
+		//System.out.println(db.findById(1L).toString());
 		
+		db.update(new Ogrenci(10L,"Deniz","HAYLAZ"));
 		
 
 		
